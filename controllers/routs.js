@@ -44,13 +44,13 @@ router.put("/animals/:id",async(req,res)=>{
 })
 
 //Create
-router.post("/animals", (req,res) => {
+router.post("/animals", async(req,res) => {
     req.body.extinct = req.body.extinct === "on" ? true:false
     const body = req.body
     //testing
     console.log(body)
     //
-    Animals.create(req.body)
+    await Animals.create(req.body)
     res.redirect("/animals")
 })
 

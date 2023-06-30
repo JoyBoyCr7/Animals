@@ -13,7 +13,7 @@
     <li>location: <%= Animal.location %></li>
     <li>lifeExpectancy: <%= Animal.lifeExpectancy %></li>
 
-    <button><a href="/animals/<%= id %>/edit">Edit</a></button>
+    <a href="/animals/<%= id %>/edit"><button>Edit</button></a>
 
     <form action="/animals/<%= id %>?_method=DELETE" method="post">
         <input type="submit" value="Delete">

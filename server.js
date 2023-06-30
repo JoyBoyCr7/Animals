@@ -16,6 +16,7 @@ const port = process.env.PORT
 //////////////////////
 
 app.use(morgan("dev"))
+app.use(express.static('public'))
 app.use(express.urlencoded({extended:false}))
 app.use(methodOveride('_method'))
 app.use("/", routes)
