@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div{
+        width: 300px;
+        border: 2px solid black;
+        background-color: white;
+    }
+    body{
+        background-color: beige;
+    }
+</style>
 <body>
-    <h1><%= Animal.name %></h1>
-    <li>species: <%= Animal.species %></li>
-    <li>extinct: <%= Animal.extinct %></li>
-    <li>location: <%= Animal.location %></li>
-    <li>lifeExpectancy: <%= Animal.lifeExpectancy %></li>
+    <div>
+        <h1><%= Animal.name %></h1>
+        <li>Species: <%= Animal.species %></li>
+        <li>Extinct: <%= Animal.extinct %></li>
+        <li>Location: <%= Animal.location %></li>
+        <li>LifeExpectancy: <%= Animal.lifeExpectancy %></li>
 
-    <a href="/animals/<%= id %>/edit"><button>Edit</button></a>
+        <a href="/animals/<%= id %>/edit"><button>Edit</button></a>
 
-    <form action="/animals/<%= id %>?_method=DELETE" method="post">
-        <input type="submit" value="Delete">
-    </form>
-    
+        <form action="/animals/<%= id %>?_method=DELETE" method="post">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
 </body>
 </html>
